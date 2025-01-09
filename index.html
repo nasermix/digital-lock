@@ -5,16 +5,23 @@
     <title>המנעול הסודי - القفل السري</title>
     <style>
  body {
-     background-color: #1a1a1a;
-    background-image: radial-gradient(circle at center, rgba(255,255,255,0.1) 1px, transparent 1px);
-    background-size: 20px 20px;
+    background-color: #1a1a1a;
+    position: relative;
+    overflow: hidden;
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.floating-locks {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
 }
+
+.floating-lock {
+    position: absolute;
+    opacity: 0.1;
+    animation: float 20s infinite linear;
         }
         .container {
             background: white;
